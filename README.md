@@ -15,45 +15,28 @@ It takes approximately 25 hours to run the code: 3 hours for `table2_mw.do` and 
 --- 
 IPUMS instructions:
 
-- Samples: 
-2017 ACS 5yr
+- Samples:  
+2017 ACS 5yr  
+2012 ACS 5yr  
+2007 ACS 3yr  
+2000-2004 ACS  
+1990: 5% state  
+1980: 5% state  
+1970: 1% state fm1 and 1% state fm2  
+1960: 5%
 
-2012 ACS 5yr
-
-2007 ACS 3yr
-
-2000-2004 ACS
-
-1990: 5% state
-
-1980: 5% state
-
-1970: 1% state fm1 and 1% state fm2
-
-1960: 5% 
-
-- Variables:
-
-Household -> Technical: CPI99
-
-Household -> Geographic: REGION, STATEFIP
-
-Person -> Demographic: SEX, AGE, BIRTHYR
-
-Person -> Race, ethnicity, and nativity: RACE, BPL
-
-Person -> Education: EDUC
-
-Person -> Work: EMPSTAT, LABFORCE, UHRSWORK
-
+- Variables:  
+Household -> Technical: CPI99  
+Household -> Geographic: REGION, STATEFIP  
+Person -> Demographic: SEX, AGE, BIRTHYR  
+Person -> Race, ethnicity, and nativity: RACE, BPL  
+Person -> Education: EDUC  
+Person -> Work: EMPSTAT, LABFORCE, UHRSWORK  
 Person -> Income: FTOTINC, INCWAGE, POVERTY
 
-- Case selections:
-
-AGE: 25-60
-
-RACE: 1-2
-
+- Case selections:  
+AGE: 25-60  
+RACE: 1-2  
 BPL: 001-056
 
 Save the data and .do files to 'data/', and name them usa_00003.dat and usa_00003.do. 
