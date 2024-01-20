@@ -166,15 +166,6 @@ local i = `i' + 1
 local i = 12
 generate M`i'_exp_rate=(avg_`i'yr_measles_rate*exposure)/100000
 
-** MW: other diseases
-/* gen pertussis_exp = avg_pertussis_rate*exposure/100000
-gen chicken_pox_exp = avg_chicken_pox_rate*exposure/100000
-gen mumps_exp = avg_mumps_rate*exposure/100000
-gen rubella_exp = avg_rubella_rate*exposure/100000 */
-
-** MW: Barteska specification
-/* gen M67_exp = exposure67*avg_6366/100000 */
-
 ** MW: use reghdfe
 /* xi i.bpl */
 
@@ -184,10 +175,6 @@ gen rubella_exp = avg_rubella_rate*exposure/100000 */
 merge m:1 bpl using "$data/census1960.dta", nogen
 * merge ACS data by state-of-birth (bpl) to 1960 census states
     * ie. assign each individual the 1960 state characteristic from their state-of-birth, not their state-of-residence
-
-*merge m:1 bpl using "$data/reporting_rate", nogen
-* merge with estimated reporting rates
-
 
 compress
 /* cd "$data"
